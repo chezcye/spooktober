@@ -1,0 +1,313 @@
+/* -------------------------------- Styles for the Global Website -------------------------------- */
+body {
+    background-color: #191726;
+    color: white;
+    font-family: 'Creepster', cursive;
+    text-align: center;
+}
+
+strong {
+    color: #D98452;
+}
+
+.haunted-hub {
+    padding: 20px; 
+}
+
+/* --------------------------------Styles for the HAUNTED HOUSE ROOMS (index.html)  -------------------------------------*/
+
+.rooms {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+/* Styling for the "DOOR DESIGN" for each of the six rooms in the Haunted House */
+.room {
+    background: #D98452;
+    color: black;
+    position: relative;
+    width: 150px;
+    height:250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+/* Styling for the "HOVER EFFECT" for each door/rooms in the Haunted House. */
+.room:hover{
+    background: #F2AA6B;
+    color: #D98452;
+    box-shadow: 0px 0px 10px #F2BF5E
+}
+
+
+/* Styling for the "DOOR HANDLE" for each of the six rooms in the Haunted House. */
+.room .handle {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    width: 15px;
+    height: 30px;
+    background-color: #F2BF5E; 
+    border-radius: 5px;
+}
+
+/* Styling for the "OPEN DOOR EFFECT" for each of the six rooms in the Haunted House. */ 
+
+.pumpkin-room-open #pumpkin {
+    transform: rotateY(-90deg);
+}
+
+.skeleton-room-open #skeleton {
+    transform: rotateY(-90deg);
+}
+
+.ghost-room-open #ghost {
+    transform: rotateY(-90deg);
+}
+
+.maze-room-open #maze {
+    transform: rotateY(-90deg);
+} 
+.weather-room-open #weather {
+    transform: rotateY(-90deg);
+}
+.countdown-room-open #countdown {
+    transform: rotateY(-90deg);
+} 
+
+/* Styling for the "BACK DOOR" on all of the room page. */
+
+.back-door {
+    background: #D98452;
+    color: black;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+}
+
+.back-door .handle {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    width: 15px;
+    height: 30px;
+    background-color: #F2BF5E; 
+    border-radius: 5px;
+    z-index: 1s;
+}
+
+/* -------------------------Styles for SKELETON DANCE PARTY Room (skeleton-dance.html) ---------------------------------- */
+/* This part of the CSS files handles the spooky aniimations for the skeleton element on DOM loaded. 
+It adds a floating, fading, rotating, and scaling effect to create a dynamic and interactive skeleton character. */
+
+/* Spooky Effect Keyframes Animation */ 
+@keyframes spookyEffect {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 0.4;
+    }
+    25% {
+        transform: translateY(-20px) scale(1.05) rotate(5deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+    75% {
+        transform: translateY(-10px) scale(1.05) rotate(-5deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 0.4;
+    }
+}
+
+
+/* Apply the animation spooky class to trigger "spookyEffect" keyframes animation */ 
+.spooky {
+    animation: spookyEffect 4s ease-in-out infinite;
+}
+
+
+/* -------------------------Styles for Spooky Weather Tower Room (spooky-weather.html) ---------------------------------- */
+/* This spooky weather code is designed to fetch the weather for a selected city using OpenWeatherMap display a themed weather. */
+
+
+.weather-container {
+    margin-top: 50px;
+}
+
+/* CSS to style the spooky forecast */
+#spooky-forecast {
+    font-size: 4rem; /* Increase font size for the text */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* CSS for icons to fly in */
+.spooky-icon {
+    display: inline-block;
+    opacity: 0; /* Initially invisible */
+    transform: translateX(-30px); /* Start position for fly-in */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.spooky-icon.fly-in {
+    opacity: 1; /* Become visible */
+    transform: translateX(0); /* Fly into view */
+}
+
+
+/* -------------------------Styles for the Countdown Clock Room (countdownn.html) ---------------------------------- */
+/* This part of the CSS create the flip effect by styling the .flip-unit, .top and bottom classes. */
+
+/* Background Glow for the Flip Clock */
+
+.flip-clock {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+     
+}
+
+.clock-section {
+    text-align: center;
+}
+
+/* Flip Unit with Spooky Shadow */ 
+.flip-unit {
+    font-size: 5rem;
+    position: relative;
+    width: 160px;
+    height: 200px;
+    perspective: 600px;
+    text-shadow: 0px 0px 15px rgba(255, 109, 0, 0.8);
+    /* Halloween Orange  Glow */ 
+    box-shadow: 0 0  15px rgba(255, 155, 0, 0.8), 0 0 25px rgba(255, 69, 0, 0.5);
+}
+
+.flip-unit:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px; 
+    /* Orange Shadow */
+    background: rgba(255, 69, 0, 0.4);
+    border-radius: 50%;
+    animation: flicker 2s infinite;
+}
+
+
+/* Flickering Animation for the shadow */ 
+@keyframes flicker {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0.5;
+    }
+    
+}
+
+.top, .bottom {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    line-height: 40px;
+    font-size: 2rem;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: bottom;
+}
+
+.top {
+    top: 0;
+    border-bottom: 2px solid #222;
+}
+
+.bottom {
+    bottom: 0;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    border-top: 2px solid #222;
+}
+
+/* Flip Animation */ 
+.flip {
+    animation: flip 0.7s forwards; 
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(-90deg);
+    }
+}
+
+.halloween-creature {
+    position: absolute;
+    font-size: 10rem;
+    display: inline-block;
+    margin: 5px;
+    color: #666;
+    animation: creatureMove 1.5s ease-in-out infinite;
+}
+
+/* Floating Animation for the halloween creatures */
+@keyframes creatureMove {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0.2;
+    }
+}
+
+/* Creeping Shadows Effect */
+.shadow-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* dark shadow */
+    transform: skewX(-20deg);
+    animation: creep 5s linear infinite;
+    pointer-events: none; /* So it doesn't interfere with any interactions */
+}
+
+/* Creeping Animation */
+@keyframes creep {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
