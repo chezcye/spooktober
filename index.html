@@ -1,0 +1,43 @@
+<!-- Main hub page -->
+<!-- Basic HTML Structure-->
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spooktober Code Challenge</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="haunted-hub">
+            <h1>Welcome to my Haunted House</h1>
+            <p>As a part of the <strong>Spooktober Code Challenge</strong>, I choosen to create a <strong>Haunted House</strong> with three scary rooms.</p>
+                <p>I invited to interact with these rooms, you just might hear something <strong>SPOOOOOOOOOKY & SCARRRRRRY</strong>!</p>
+            
+            <!--Class rooms div is a div to hold the six haunted rooms in my Haunted House-->
+            <div class="rooms">
+
+                <!-- Skeleton Dance Party  -->
+                <div class="room" id="skeleton">Skeleton Animation 
+                    <div class="handle"></div>
+                </div>
+
+                <!-- Spooky Weather Tower  -->
+                <div class="room" id="weather">Spooky Weather
+                    <div class="handle"></div>
+                </div>
+
+                <!-- Halloween Countdown Clock  -->
+                <div class="room" id="countdown">Halloween Countdown
+                    <div class="handle"></div>
+                </div>
+
+            </div> <!--end of the class rooms -->
+
+            <audio src="sounds/ambient-background.mp3" id="background-sound" loop></audio>
+            <audio src="sounds/ghost-whisper.wav" id="hover-sound"></audio>
+            <audio src="sounds/door-creak.wav" id="click-sound"></audio>
+
+        <script src="js/main.js"></script>
+    </body>
+ </html>
