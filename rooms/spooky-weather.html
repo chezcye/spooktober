@@ -1,0 +1,33 @@
+<!--------------------------Structure for the Spooky Weather Tower (spooky-weather.html)-------------------------->
+<!--This spooky weather code is designed to fetch the weather for a selected city using OpenWeatherMap display a themed weather. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewoport" content="width=device-width, initial-scale=1.0">
+        <title>Spooky Weather Toower </title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <div class="back-door" id="back-door">
+            Haunted House 
+            <div class="handle"></div>
+        </div>
+        <!--Acts as a placeholder to hold the weather infomation and spooky icons.-->
+        <div class="weather-container">
+            <h1>Spooky Weather Forecast</h1>
+            <p>This Spooky Weather Forecast was created using OpenWeatherMap for a selected city, that then showcase a Halloween themed weather.</p>
+            
+            <!--Acts as a placeholder for the weather info, that initially go from "loading weather" to the current weather description from the API. -->
+            <br>
+            <p id="weather-description">Loading Weather....</p>
+
+            <!--Acts as a placehoolder for the spooky forecast icons. -->
+            <div id="spooky-forecast"></div>
+        </div>
+
+
+        <script src="../js/weather.js"></script>
+    </body>
+</html>
